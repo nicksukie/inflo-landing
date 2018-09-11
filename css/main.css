@@ -17,7 +17,7 @@ a {
     color: #999;
 }
 a:hover {
-    text-decoration: underline;
+    color:#000;
 }
 h1 {
     font-size: 3em;
@@ -36,8 +36,13 @@ footer {
 ul { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
+    text-align: right;
 }
 
 ul li {
     list-style: none;
+}
+
+.top {
+    background-color: #23E89C;
 }
