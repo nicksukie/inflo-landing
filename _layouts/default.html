@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
-  		<title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-  
-  </head>
-<body>
-<nav>
-	<ul>
-  <li>
-<a href="/index.html" {% if page.url == "/" %}style="color: darkblue;"{% endif %}>About</a></li>  
-      <li>
-<a href="/research" {% if page.url == "research" %}style="color: red;"{% endif %}>Research</a></li>  
-      <li>
-<a href="/team" {% if page.url == "/team" %}style="color: red;"{% endif %}>Team</a></li>  
-        <li>
-<a href="/for_publishers" {% if page.url == "/for_publishers" %}style="color: red;"{% endif %}>For Publishers</a></li> </ul>
-  </nav>
-  
-  	<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-<footer>
-	    		<ul>
-	        		<li><a href="mailto:sukieniko0312@gmail.com">email</a></li>
-	        		<li><a href="https://twitter.com/sukienniko">twitter</a></li>
-				</ul>
-			</footer>
-</body>
+    {% include head.html %}
+    <body id="page-top" class="index">
+    {% include nav.html %}
+    {% include header.html %}
+    {% include about.html %}
+    {% include portfolio_grid.html %}
+    
+
+    {% if site.contact == "static" %}
+    {% include contact_static.html %}
+    {% elsif site.contact == "disqus" %}
+    {% include contact_disqus.html %}
+    {% else %}
+    {% include contact.html %}
+    {% endif %}
+
+    {% include footer.html %}
+    {% include modals.html %}
+    {% include js.html %}
+    </body>
 </html>
