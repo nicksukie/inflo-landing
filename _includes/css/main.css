@@ -76,8 +76,9 @@ hr.star-light:after {
 header {
     text-align: center;
     color: #fff;
-    background-image: url("img/plants.jpg");
-    background-size: 100%;
+    background: #18bc9c;
+    /* background-image: url("img/plants.jpg");
+    background-size: 100%;*/
 }
 
 header .container {
@@ -189,6 +190,16 @@ section.success {
         padding-top: 75px;
     }
 }
+
+
+
+.feature img {
+    max-width: 100%;
+    display: inline-block; 
+    float: left
+
+}
+
 
 
 section.portfolio {
