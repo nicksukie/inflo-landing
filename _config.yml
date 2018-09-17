@@ -1,4 +1,74 @@
-remote_theme: freelancer
-title: Welcome to the Inflo Project
+
+
+
+# Site settings
+
+email: your-email@domain.com
+url: https://example.github.io
+welcome: Welcome to the Inflo Project
+skills: Kicking off a new era of <i>responsible, reliable</i> social media.
+
+
+title: The Inflo Project
 description: a new, revolutionary way to share and access the content that matters to you
+
+keywords: "your keywords, separated by commas"
+meta_author: Sukiennik Nicholas
+
+# Google webmaster tools
+google_verify:
+
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Contact form:
+# - static : pass through formspree.io to validate email sending
+# - disqus : replace contact form by disqus thread
+# - comment the line below if you want to stick with the default PHP contact form
+#contact: static
+
+# If you use disqus you need disqus shortname
+# https://help.disqus.com/customer/portal/articles/466208
+disqus_shortname: myshortname
+
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  white: 999
+  primary: 18bc9c #80B3FF
+  primary-rgb: "24,288,156" #"128,179,255"
+  secondary: 2c3e50 #FD6E8A
+  secondary-dark: 233140 #A2122F
+  twitty: e7ecf1
+
+# Footer settings
+footer:
+  copyright: Inflo Ltd.
+  location: World
+  social: Stay in the loop
+  credits: About
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: http://twitter.com/sukienniko
+  - title: facebook
+    url:
+  - title: stack-overflow
+    url: http://stackoverflow.com/questions/tagged/jekyll
+  - title: bitbucket
+    url: http://bitbucket.org/jekyll
+  - title: github
+    url: http://github.com/jekyll
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 
+  - line: 
+
+# Credits content
+credits: 'The Inflo Project is a next generation content sharing 
+platform revising the way we access and share information on the web, <i>intended to nourish, not feed.</i>'
+
+# Build settings
 markdown: kramdown
+permalink: pretty
