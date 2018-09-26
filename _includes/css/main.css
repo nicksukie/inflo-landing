@@ -9,11 +9,11 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 a,
@@ -27,13 +27,20 @@ a.active {
 
 h1,
 h2,
-h3,
-h4,
+h3, h4 {
+  text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+
+
+}
+
+
 h5,
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 
@@ -43,7 +50,7 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 3px;
     text-align: center;
     overflow: visible;
 }
@@ -119,7 +126,7 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 3.25em;
     }
 
     header .intro-text .skills {
@@ -181,7 +188,7 @@ section {
 
 section h2 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 section.success {
@@ -303,6 +310,11 @@ section.portfolio {
     color: #fff;
     background: 0 0;
     transition: all .3s ease-in-out;
+}
+
+.btn-slack {
+
+    background: #4D394B ;
 }
 
 .btn-outline:hover,
