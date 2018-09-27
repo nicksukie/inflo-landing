@@ -667,9 +667,9 @@ transition: 0.5s;
 .cb_button-layer { 
 
 height: 30px;
-width: 100%;
+width: auto;
 margin-top: 0px;
-padding-right: 30px;    
+padding-right: 0px;    
 z-index: 0;
 text-align: center;
 
@@ -698,21 +698,23 @@ vertical-align: bottom;
 }
 
 .buttonContain{
-display:    block;
-float:  right;
+display: inline-block;
+
 width: 30px;
+margin: auto;
 max-height: 100px;
     opacity: 0.7;
     cursor: pointer;
-    padding: 0px 5px;
+    padding: 0px 0px;
     padding-bottom: 0px;
     margin: 0;
     z-index: 9;
 
 }
 
-.buttonContain>img {
-height: 30px;
+.buttonContain>a>img {
+max-height: 30px;
+max-width:  30px;
 }
 
 /* Dropdown button on hover & focus */
