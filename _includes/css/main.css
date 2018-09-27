@@ -100,8 +100,8 @@ header {
     text-align: center;
     color: #fff;
     background: #18bc9c;
-    /* background-image: url("img/plants.jpg");
-    background-size: 100%;*/
+    background-image: url("img/header-bg.jpg");
+    background-size: 100%;
 }
 
 header .container {
@@ -114,18 +114,45 @@ header img {
     margin: 0 auto 20px;
 }
 
+header .intro-text {
+    
+
+}
+
+
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
+    background-color: rgba(255,255,255, 0.6);
+    color: #{{ site.color.secondary }};
+
+}
+
+header .intro-text .name.sub {
+font-size: 28px;
+
+}
+
+header .intro-text .skills.sub {
+line-height: 40px;
+font-size: 20px;
+
 }
 
 header .intro-text .skills {
     font-size: 1.25em;
     font-weight: 300;
+    background-color: rgba(255,255,255, 0.6);
+    padding: 5px 10px;
+
+    color: #{{ site.color.primary }};
+
+    
 }
+
 
 @media(min-width:768px) {
     header .container {
@@ -140,6 +167,15 @@ header .intro-text .skills {
     header .intro-text .skills {
         font-size: 1.75em;
     }
+}
+
+.skills-emphasized {
+
+opacity: 1.0;
+font-weight: bold;
+color: #{{ site.color.primary }};
+
+
 }
 
 @media(min-width:768px) {
@@ -672,8 +708,7 @@ margin-top: 0px;
 padding-right: 0px;    
 z-index: 0;
 text-align: center;
-
-    display: inline-block
+display: inline-block
 float: none;
 padding-top: 0px;
 border-top: 1px solid;
@@ -691,13 +726,10 @@ vertical-align: bottom;
     float: right;
     height:  30px;
 
-
     z-index: 1500;
-
-
 }
 
-.buttonContain{
+.buttonContain {
 display: inline-block;
 
 width: 30px;
