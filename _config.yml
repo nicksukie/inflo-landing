@@ -42,7 +42,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: Inflo Ltd.
+  copyright: The Inflo Project
   location: World
   social: Stay in the loop
   credits: About
@@ -51,8 +51,8 @@ footer:
 social:
   - title: twitter
     url: http://twitter.com/infloproject
-  - title: medium
-    url: https://medium.com/the-inflo-project/
+ # - title: medium
+  #  url: https://medium.com/the-inflo-project/
 
 
 # Postal address (add as many lines as necessary)

@@ -36,12 +36,20 @@ h3, h4 {
 }
 
 
-h5,
+h5 {
+
+    font-size:  14px;
+    line-height:    18px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600; 
+}
+
 h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
 }
+
 
 
 hr.star-light,
@@ -50,7 +58,7 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: solid 3px;
+    border-top: solid 0px;
     text-align: center;
     overflow: visible;
 }
@@ -322,7 +330,7 @@ section.portfolio {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #{{ site.color.primary }};
+    color: #{{ site.color.secondary }};
     background: #fff;
 }
 
@@ -556,11 +564,11 @@ footer .footer-below {
 }
 
 
-.cb_layout:hover {
+/*.cb_layout:hover {
 
 box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.2); 
 opacity: 1;
-}
+}*/
 
 
 .imagePlusInfo {
