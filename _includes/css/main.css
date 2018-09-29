@@ -131,16 +131,7 @@ header .intro-text .name {
 
 }
 
-header .intro-text .name.sub {
-font-size: 28px;
 
-}
-
-header .intro-text .skills.sub {
-line-height: 40px;
-font-size: 20px;
-
-}
 
 header .intro-text .skills {
     font-size: 1.25em;
@@ -151,6 +142,19 @@ header .intro-text .skills {
     color: #{{ site.color.primary }};
 
     
+}
+
+.name .sub {
+font-size: 28px;
+
+}
+
+.skills .sub {
+line-height: 40px;
+font-size: 20px;
+margin-top: 500px;
+
+
 }
 
 
