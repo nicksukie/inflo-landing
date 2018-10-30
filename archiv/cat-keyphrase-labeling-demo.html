@@ -1,0 +1,693 @@
+<!DOCTYPE html5>
+<html lang="en-US">
+<head> 
+
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126744533-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126744533-1');
+</script>
+  <meta charset="utf-8"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/demo-style-v2.css">
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<script>
+
+/*  $.ajax({
+        async: false,
+        type: 'GET',
+        url: 'http://localhost:8080/test-app/cnn/demo-v1.py',
+success: function(data) {
+            alert(data);
+            }
+});*/
+	
+/*const Http = new XMLHttpRequest();
+const url= 'https://newsapi.org/v2/top-headlines?' +
+          'country=us&' +
+          'apiKey=d478da899a2548d98c0255eaceab061a';
+
+
+Http.open("GET",url);
+Http.send();
+
+Http.onreadystatechange=function() { 
+if(this.readyState==4 && this.status==200){
+	//console.log(Http.responseText);
+
+
+ var data = Http.responseText;
+ var json = JSON.parse(data); 
+
+ var articles = json.articles;
+//console.log(articles);
+ articles.forEach(appendData);
+
+function appendData(value, index, array) {
+var title = value.title;
+var sourceName = value.source.name;
+var url_article = value.url;
+var img = value.urlToImage;*/
+//console.log(value.title);
+/*$('#news-container').append("<form name='"+url_article+"'><div class='article_container' onclick='callPython('"+url_article+"')'><h4>"+title+"</h4><h6>"+sourceName+"</h6><input style='display:none' value=''></div></form>");*/
+
+$('#news-container').append("<div id='"+url_article+"' class='article_container' ><h4>"+title+"</h4><h6>"+sourceName+"</h6></div>");
+
+		}
+	}
+
+}
+
+</script>
+
+
+</head>
+
+<body>
+
+
+
+
+	
+<h1>Inflo News Categorization and Keyphrase Extraction Demo - V1</h1>
+<h6>The current demo uses static, pre-computed data, as a sample of the algorithm capabilities and output. We are currently in the process of hosting the trained models to a web service. Please stayed tuned for the dynamic version to be released soon in V2</h6>
+<div class=dashboard>
+<h3>Recent Stories</h3>
+
+
+		
+<div id="news-container" class="col-sm-6 column_container">
+
+<div id="article-0-link" class="article_container" ><h4>Brazilians Head to Polls in Divisive Presidential Election</h4><h6>The Wall Street Journal</h6></div>
+
+
+<div id="article-1-link" class="article_container"><h4>Winning numbers for Powerball's $688 million jackpot drawn</h4><h6>CNBC</h6></div>
+
+
+<div id="article-2-link" class="article_container" ><h4>Who are Narayan Thakur and Tababi Devi? Know about two athletes PM Modi mentioned in Mann Ki Baat</h4><h6>Financialexpress.com</h6></div>
+
+
+<div id="article-3-link" class="article_container" ><h4>President Trump's rejection of a key pillar of Reagan conservatism</h4><h6>The Washington Post</h6></div>
+
+
+<div id="article-4-link" class="article_container" ><h4>Red Sox rebound, move one win from title with Game 4 rally</h4><h6>Espn.com</h6></div>
+
+
+<div id="article-5-link" class="article_container" ><h4>Pittsburgh synagogue shooting: Suspect charged with murder</h4><h6>Bbc.com</h6></div>
+
+
+<div id="article-6-link" class="article_container" ><h4>Trump Turns Down India's Invite For Republic Day Celebrations: Reports</h4><h6>Ndtv.com</h6></div>
+
+
+<div id="article-7-link" class="article_container"><h4>5 outcomes from Week 9 that could impact the College Football Playoff picture</h4><h6>Ncaa.com</h6></div>
+
+
+<div id="article-8-link" class="article_container" ><h4>Dirk Nowitzki on LeBron: 'He can pass Kareem' for scoring record</h4><h6>Espn.com</h6></div>
+
+
+<div id="article-9-link" class="article_container"><h4>Four Jaguars players detained in London day before Eagles matchup</h4><h6>Espn.com</h6></div>
+
+<div id="article-10-link" class="article_container" ><h4>Critics say Trump has fostered the toxic environment for the political violence he denounces</h4><h6>The Washington Post</h6></div>
+
+
+<div id="article-11-link" class="article_container" ><h4>'He felt that somebody was finally talking to him': How the package-bomb suspect found inspiration in Trump</h4><h6>The Washington Post</h6></div>
+
+
+<div id="article-12-link" class="article_container" ><h4>Bodies of two Fairfax sisters washed up in New York City river, police say</h4><h6>The Washington Post</h6></div>
+
+
+<div id="article-13-link" class="article_container"><h4>Israel says Iran is behind overnight rocket fire from Gaza</h4><h6>The Washington Post</h6></div>
+
+
+<div id="article-14-link" class="article_container"><h4>At Istanbul Summit, Russia Seeks Role as Mediator of Syria War</h4><h6>The Wall Street Journal</h6></div>
+
+</div>
+
+<div class="col-sm-6 column_container" id="details">
+<h4 class="placeholder" style="display: show;">Click on an article in the list to view details</h4>
+
+<div class="expand" style="display: none;" id="article-0">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://images.wsj.net/im-33249/social"></div>
+                  
+                      <h4 id="SOURCE">WSJ</h4> <a id="LINK" href="https://www.wsj.com/articles/brazilians-head-to-polls-in-divisive-presidential-election-1540724400">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">Brazilians Head to Polls in Divisive Presidential Election</h3>
+                      <h6 id="DESCRIPTION">Brazilians began voting Sunday in a divisive presidential race expected to elect combative ex-army captain Jair Bolsonaro, shifting the country’s politics sharply to the right.</h6>
+            <h2 class="cat_label_container" id="cat_label">Politics</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">divisive presidential race</h4><h4 class="keyword_label_container" id="cat_label">combative ex-army captain jair bolsonaro</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+<div class="expand" style="display: none;" id="article-1">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2016/01/14/103306105-RTX22B37.1910x1000.jpg"></div>
+                  
+                      <h4 id="SOURCE">CNBC</h4> <a id="LINK" href="https://www.cnbc.com/2018/10/28/winning-numbers-for-powerballs-688-million-jackpot-drawn.html">Go to article</a>
+                      <h4 id="DATETIME">Sun, 28 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">Winning numbers for Powerball's $688 million jackpot drawn</h3>
+                      <h6 id="DESCRIPTION">The winning numbers for the estimated $687.8 million Powerball jackpot, the fourth largest in the lottery's history, were drawn Saturday night.</h6>
+            <h2 class="cat_label_container" id="cat_label">US &amp; World</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">saturday night</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+
+<div class="expand" style="display: none;" id="article-2">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://images.financialexpress.com/2018/10/Dpo4t7rUUAAUiT5-660.jpg"></div>
+                  
+                      <h4 id="SOURCE">The Financial Express</h4> <a id="LINK" href="https://www.financialexpress.com/sports/who-are-narayan-thakur-and-tababi-devi-know-about-two-athletes-pm-modi-mentioned-in-mann-ki-baat/1364159/">Go to article</a>
+                      <h4 id="DATETIME">Sun, 28 Oct 2018 09:04:42 GMT</h4>
+                      
+                      <h3 id="HEADLINE">Who are Narayan Thakur and Tababi Devi? Know about two athletes PM Modi mentioned in Mann Ki Baat</h3>
+                      <h6 id="DESCRIPTION">Prime Minister Narendra Modi in his monthly radio programme 'Mann Ki Baat' said that India is setting new records not just in the field of sports but also in hitherto uncharted areas.</h6>
+            <h2 class="cat_label_container" id="cat_label">Sports</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">narayan thakur</h4><h4 class="keyword_label_container" id="cat_label">tababi devi</h4><h4 class="keyword_label_container" id="cat_label">gold medal</h4><h4 class="keyword_label_container" id="cat_label">athletes pm modi</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-3">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.washingtonpost.com/resizer/rHsth1S5vOuzzFhrshy-kqKwn7M=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/B7IC4QGVYQI6RA4EXTCUSL7PJE.jpg"></div>
+                  
+                      <h4 id="SOURCE">Washington Post</h4> <a id="LINK" href="https://www.washingtonpost.com/outlook/2018/10/28/president-trumps-rejection-key-pillar-reagan-conservatism/">Go to article</a>
+                      <h4 id="DATETIME">Sun, 28 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">President Trump’s rejection of a key pillar of Reagan conservatism</h3>
+                      <h6 id="DESCRIPTION">The INF treaty reflected a conservative worldview built around alliances.</h6>
+            <h2 class="cat_label_container" id="cat_label">Politics</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">western alliance</h4><h4 class="keyword_label_container" id="cat_label">ballistic missiles</h4><h4 class="keyword_label_container" id="cat_label">inf treaty</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+<div class="expand" style="display: none;" id="article-4">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="http://a.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F1027%2Fr453965_1296x729_16%2D9.jpg"></div>
+                  
+                      <h4 id="SOURCE">ESPN.com</h4> <a id="LINK" href="http://www.espn.com/mlb/story/_/id/25102472/mlb-boston-red-sox-rebound-move-one-win-title-game-4-rally">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">MLB -- Boston Red Sox rebound, move one win from title with Game 4 rally</h3>
+                      <h6 id="DESCRIPTION">Inspired by their ace, the Red Sox piled up nine runs against the Dodgers' bullpen to gain a 3-1 lead and come back from the longest loss in World Series history.</h6>
+            <h2 class="cat_label_container" id="cat_label">Sports</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">boston red sox rebound</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+  
+
+<div class="expand" style="display: none;" id="article-5">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://ichef.bbci.co.uk/images/ic/1024x576/p06q2l1h.jpg"></div>
+                  
+                      <h4 id="SOURCE">BBC News</h4> <a id="LINK" href="https://www.bbc.com/news/world-us-canada-46007707">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">Pittsburgh synagogue shooting: Suspect charged with murder</h3>
+                      <h6 id="DESCRIPTION">Eleven people died in the Pittsburgh attack, the worst anti-Semitic violence in recent US history.</h6>
+            <h2 class="cat_label_container" id="cat_label">Entertainment</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">pittsburgh synagogue shooting</h4><h4 class="keyword_label_container" id="cat_label">murder media playback</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-6">
+
+    
+    <div class="cb_layout" >   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://i.ndtvimg.com/i/2017-11/trump-modi-afp_650x400_71510576145.jpg"></div>
+                  
+                      <h4 id="SOURCE">NDTV.com</h4> <a id="LINK" href="https://www.ndtv.com/india-news/donald-trump-turns-down-indias-invite-to-be-chief-guest-at-republic-day-celebrations-reports-1938731">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">Trump Turns Down India's Invite For Republic Day Celebrations: Reports</h3>
+                      <h6 id="DESCRIPTION">US President Donald Trump has reportedly declined India's invitation to be the chief guest at the Republic Day celebrations. In early August, White House press secretary Sarah Sanders had confirmed Mr Trump received an invitation to visit India. "I know that the invitation has been extended, but I do not believe that a final decision has been made," Ms Sanders told reporters then.</h6>
+            <h2 class="cat_label_container" id="cat_label">Politics</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">republic day celebrations</h4><h4 class="keyword_label_container" id="cat_label">mr trump</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-7">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.ncaa.com/sites/default/files/public/styles/large/public-s3/images/2018-10-27/Kentucky-football.jpg?itok=OtGwfNJ3"></div>
+                  
+                      <h4 id="SOURCE">NCAA.com</h4> <a id="LINK" href="https://www.ncaa.com/news/football/article/2018-10-27/college-football-playoff-5-outcomes-week-9-could-impact-playoff">Go to article</a>
+                      <h4 id="DATETIME">Sat, 27 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">College Football Playoff: 5 outcomes from Week 9 that could impact the Playoff picture</h3>
+                      <h6 id="DESCRIPTION">SEC championship implications, reassuring blowouts, and insane comebacks — Week 9 had it all. Bust most importantly, it had plenty of implications for the College Football Playoff picture.
+
+Here are five results from Saturday that could impact the Playoff:
+
+VIEW THE FULL FBS SCOREBOARD
+
+No. 12 Kentucky 15, Missouri 14
+
+Kentucky kept its playoff hopes alive (yes, you read that correctly), winning on a walk-off against Missouri, 15-14.</h6>
+            <h2 class="cat_label_container" id="cat_label">Sports</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">college football playoff</h4><h4 class="keyword_label_container" id="cat_label">kentucky-georgia game</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-8">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="http://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2018%2F1027%2Fr453969_1296x729_16%2D9.jpg"></div>
+                  
+                      <h4 id="SOURCE">ESPN.com</h4> <a id="LINK" href="http://www.espn.com/nba/story/_/id/25102215/lebron-james-los-angeles-lakers-passes-dirk-nowitzki-all-scoring-list">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">LeBron James of Los Angeles Lakers passes Dirk Nowitzki on all-time scoring list</h3>
+                      <h6 id="DESCRIPTION">Passed by LeBron James for sixth on the all-time scoring list, Dirk Nowitzki said he believes LeBron "can pass Kareem" as the greatest scorer ever "if he keeps this up."</h6>
+            <h2 class="cat_label_container" id="cat_label">Sports</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">los angeles lakers</h4><h4 class="keyword_label_container" id="cat_label">dirk nowitzki</h4><h4 class="keyword_label_container" id="cat_label">lebron james</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+
+<div class="expand" style="display: none;" id="article-9">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="http://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2017%2F0824%2Fr248420_1296x729_16%2D9.jpg"></div>
+                  
+                      <h4 id="SOURCE">ESPN.com</h4> <a id="LINK" href="http://www.espn.com/nfl/story/_/id/25102097/four-jacksonville-jaguars-players-detained-london">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">Four Jacksonville Jaguars players detained in London</h3>
+                      <h6 id="DESCRIPTION">The Jaguars said four players were detained in London "over restitution of a bill." A source confirmed to ESPN that the players involved were Barry Church, D.J. Hayden, Ronnie Harrison and Jarrod Wilson.</h6>
+            <h2 class="cat_label_container" id="cat_label">Sports</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">jacksonville jaguars players</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-10">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.washingtonpost.com/resizer/eRMuzYe4a0eXeDZHZp4AohyyGXo=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/3OK73UW2HII6RIIPWUKUNMIHKY.jpg"></div>
+                  
+                      <h4 id="SOURCE">Washington Post</h4> <a id="LINK" href="https://www.washingtonpost.com/politics/the-central-premise-of-his-presidency-critics-say-trump-has-fostered-the-toxic-environment-for-the-political-violence-he-denounces/2018/10/27/cd45e43e-da1e-11e8-a10f-b51546b10756_story.html">Go to article</a>
+                      <h4 id="DATETIME">Sat, 27 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">Critics say Trump has fostered the toxic environment for the political violence he denounces</h3>
+                      <h6 id="DESCRIPTION">The president, once hoping to fan fears of Central American migrants, is facing accusations that his tolerance of rising white nationalism is a greater threat.</h6>
+            <h2 class="cat_label_container" id="cat_label">Politics</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">political persuasion</h4><h4 class="keyword_label_container" id="cat_label">campaign rally</h4><h4 class="keyword_label_container" id="cat_label">greater national security threat</h4><h4 class="keyword_label_container" id="cat_label">central american migrants</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-11">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.washingtonpost.com/resizer/qU-vrI9xFjzdafIC1r2GCsMeu4U=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/7QX24LGZXQI6RA4EXTCUSL7PJE.jpg"></div>
+                  
+                      <h4 id="SOURCE">Washington Post</h4> <a id="LINK" href="https://www.washingtonpost.com/nation/2018/10/27/cesar-sayoc-was-someone-lost-then-he-found-father-trump-family-attorney-tells-cnn/">Go to article</a>
+                      <h4 id="DATETIME">Sat, 27 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">‘He felt that somebody was finally talking to him’: How the package-bomb suspect found inspiration in Trump</h3>
+                      <h6 id="DESCRIPTION">Cesar Sayoc had long searched for an identity. He found one as a vigorous supporter of the president.</h6>
+            <h2 class="cat_label_container" id="cat_label">Entertainment</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">lawyer ronald lowy</h4><h4 class="keyword_label_container" id="cat_label">trump boca raton</h4><h4 class="keyword_label_container" id="cat_label">first thing</h4><h4 class="keyword_label_container" id="cat_label">cesar sayoc</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-12">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.washingtonpost.com/resizer/7hK-0JTrN4yXpb8wcCmg9NWDaRE=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/HRPDSAG2AMI6RLVX3XFNJIFFJY.jpg"></div>
+                  
+                      <h4 id="SOURCE">Washington Post</h4> <a id="LINK" href="https://www.washingtonpost.com/local/public-safety/bodies-of-two-fairfax-sisters-washed-up-in-new-york-city-river-police-say/2018/10/27/3224381e-d9f8-11e8-83a2-d1c3da28d6b6_story.html">Go to article</a>
+                      <h4 id="DATETIME">Sat, 27 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">Bodies of two Fairfax sisters washed up in New York City river, police say</h3>
+                      <h6 id="DESCRIPTION">The younger sister was reported missing in August.</h6>
+            <h2 class="cat_label_container" id="cat_label">War &amp; Conflict</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">new york city river</h4><h4 class="keyword_label_container" id="cat_label">rotana farea</h4><h4 class="keyword_label_container" id="cat_label">fairfax sisters</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+<div class="expand" style="display: none;" id="article-13">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://www.washingtonpost.com/resizer/Nr5QijN3beGaEL5JRAOOOg4ygwM=/1484x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/2HOCPFGZY4I6RA5C2HB5UKGWWY.jpg"></div>
+                  
+                      <h4 id="SOURCE">Washington Post</h4> <a id="LINK" href="https://www.washingtonpost.com/world/israel-says-iran-is-behind-overnight-rocket-fire-from-gaza/2018/10/27/b4f4dec8-d9b8-11e8-83a2-d1c3da28d6b6_story.html">Go to article</a>
+                      <h4 id="DATETIME">Sat, 27 Oct 2018 00:00:00 GMT</h4>
+                      
+                      <h3 id="HEADLINE">Israel says Iran is behind overnight rocket fire from Gaza</h3>
+                      <h6 id="DESCRIPTION">Israel responded with airstrikes Saturday to a salvo of rockets fired from the Gaza Strip into its territory overnight.</h6>
+            <h2 class="cat_label_container" id="cat_label">War &amp; Conflict</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">overnight rocket fire</h4><h4 class="keyword_label_container" id="cat_label">israeli airstrike</h4><h4 class="keyword_label_container" id="cat_label">gaza smoke</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+  
+<div class="expand" style="display: none;" id="article-14">
+
+    
+    <div class="cb_layout">   
+            <h4 class="placeholder" style="display: none;">Click on an article in the list to view details</h4>
+            <div style="" id="IPI" class="imagePlusInfo">
+                <div class="image_container"><img id="IMG" src="https://images.wsj.net/im-33215/social"></div>
+                  
+                      <h4 id="SOURCE">WSJ</h4> <a id="LINK" href="https://www.wsj.com/articles/at-istanbul-summit-russia-seeks-role-as-mediator-of-syria-war-1540625897">Go to article</a>
+                      <h4 id="DATETIME"></h4>
+                      
+                      <h3 id="HEADLINE">At Istanbul Summit, Russia Seeks Role as Mediator of Syria War</h3>
+                      <h6 id="DESCRIPTION">Russia used a four-nation summit here on Saturday to cement its new role as a Middle East power broker and attract European funding for rebuilding Syria after its war ends.</h6>
+            <h2 class="cat_label_container" id="cat_label">Politics</h2>
+                        <div class="cb_tag" id="KEYWORDS"><h4 class="keyword_label_container" id="cat_label">russia seeks role</h4><h4 class="keyword_label_container" id="cat_label">war ends</h4><h4 class="keyword_label_container" id="cat_label">istanbul summit</h4></div>
+                </div>
+
+
+
+     </div>  
+      
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<script>
+	
+
+$("#article-0-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+  $('.placeholder').hide();
+  $('#article-0').show();
+  
+}); 
+
+$("#article-1-link").click(function(){
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-1').show();
+}); 
+
+
+$("#article-2-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-2').show();
+}); 
+
+
+$("#article-3-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-3').show();
+}); 
+
+
+$("#article-4-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-4').show();
+}); 
+
+
+$("#article-5-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-5').show();
+}); 
+
+
+$("#article-6-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-6').show();
+}); 
+
+
+$("#article-7-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-7').show();
+}); 
+
+
+$("#article-8-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-8').show();
+}); 
+
+
+$("#article-9-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-9').show();
+}); 
+
+$("#article-10-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-10').show();
+}); 
+
+
+$("#article-11-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-11').show();
+}); 
+
+$("#article-12-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-12').show();
+}); 
+
+
+$("#article-13-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-13').show();
+}); 
+
+
+$("#article-14-link").click(function() {
+var i
+for (i=0; i<15; i++){
+  $("#article-"+i+"").hide();
+}
+ $('.placeholder').hide();
+  $('#article-14').show();
+});  
+
+
+
+</script>
+
+</body>
+</html>
