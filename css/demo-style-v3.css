@@ -82,6 +82,7 @@ float: left;
 	border-color: lightgrey;
 	padding: 20px;
 	padding-left: 0PX;
+	padding-bottom: 0;
 	border-radius: 5px; 
 		
 	text-align: none;
@@ -174,7 +175,7 @@ margin: 0 5px 5px 0;
 
 .keyword_label_container {
 display: inline-block;
-width: 100%;
+width: 90%;
 background: white;
 padding: 	8px;
 border-radius: 	3px;
@@ -207,7 +208,7 @@ margin-top: 15px;
 	border-right: 1px solid grey;
 	border-left: 1px solid grey;
 	border-bottom: 1px solid grey;
-min-height: 300px;
+
 }
 
 .method select {
@@ -216,4 +217,14 @@ min-height: 300px;
 }
 
     
-      
+
+
+.results {
+	margin-top: 5px;
+display: inline-block;
+	float: left;
+	width: 50%;
+	text-align: center;
+	
+	min-height: 250px;
+}
