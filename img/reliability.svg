@@ -26,17 +26,17 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="20.816748"
+     inkscape:cx="-316.5742"
      inkscape:cy="400.0044"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:snap-global="false"
      showguides="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
-     inkscape:window-x="-8"
-     inkscape:window-y="-5"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
@@ -46,7 +46,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,7 +56,7 @@
      id="layer1"
      transform="translate(0,-117)">
     <circle
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#46d0ac;stroke-width:9.37444401;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#1494c2;stroke-width:9.37444401;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
        id="path815"
        cx="90.375069"
        cy="206.83678"
@@ -66,7 +66,7 @@
        inkscape:connector-curvature="0"
        id="path1099"
        d="m 90.486434,158.07955 c 20.574976,7.4772 30.366916,12.29487 51.862846,11.90565 7.80939,74.93238 -51.152904,96.88225 -51.152904,96.88225 h -2.095127 c 0,0 -58.962257,-21.94987 -51.152866,-96.88225 21.495907,0.38922 31.287845,-4.42845 51.86281,-11.90565 z"
-       style="fill:#46d0ac;fill-opacity:1;fill-rule:evenodd;stroke:#46d0ac;stroke-width:5.92999983;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#1494c2;fill-opacity:1;fill-rule:evenodd;stroke:#1494c2;stroke-width:5.92999983;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:5.67700005;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 64.217963,213.45421 25.564421,25.56443 32.096726,-55.59315 -32.691248,45.08994 z"

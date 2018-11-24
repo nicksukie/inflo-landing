@@ -8,6 +8,8 @@ body {
     overflow-x: hidden;
 }
 
+
+
 p {
     font-size: 16px;
 }
@@ -239,7 +241,7 @@ color: #{{ site.color.primary }};
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 600;
-    background: #2c3e50 ;
+    background: {{site.primary}} ;
 }
 
 .navbar a:focus {
@@ -398,7 +400,7 @@ section.portfolio {
 .btn-outline.active {
     border: solid 2px #fff;
     color: #{{ site.color.secondary }};
-    background: #fff;
+    background: {{ site.color.secondary }};
 }
 
 .floating-label-form-group {
@@ -797,4 +799,16 @@ display:block;
 text-align: center;
 
 
+}
+
+
+.btn {
+background: #{{ site.color.primary }};
+color: white;
+
+}
+
+.btn:hover, .btn:active, .btn:focus {
+    background: #{{ site.color.secondary }};
+    color: #white;
 }
