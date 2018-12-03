@@ -36,7 +36,7 @@ color:
   white: 999
   primary: 1494C2 #18bc9c #80B3FF //green
   primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2C3E65 #2c3e50 #FD6E8A
+  secondary: 2C3E65 # #FD6E8A
   secondary-dark: 233155 #233140 #A2122F dark blue
   twitty: e7ecf1 #bg gray
 
