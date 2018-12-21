@@ -101,7 +101,7 @@ hr.star-primary {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+
     background-image: url("img/header-bg.jpg");
     background-size: 100%;
 }
@@ -811,4 +811,15 @@ color: white;
 .btn:hover, .btn:active, .btn:focus {
     background: #{{ site.color.secondary }};
     color: #white;
+}
+
+
+
+
+.blog-entry-preview {
+
+margin: 0% 5% 5% 5%;
+padding: 20px;
+border: 1px solid darkgrey;
+box-shadow: inset 3px #000; 
 }
