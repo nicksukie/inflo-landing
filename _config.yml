@@ -9,10 +9,10 @@ welcome: Welcome to the Inflo Project
 skills: 
 
 
-title: The Inflo Project
-description: a new, revolutionary way to share and access the content that matters to you
+title: Inflo - Revising the way we get news online
+description: a new, revolutionary way to share and access the content that matters to you.
 
-keywords: "your keywords, separated by commas"
+keywords: "news aggregation, social media, responsible tech, ethical AI, ad-free"
 meta_author: Sukiennik Nicholas
 
 # Google webmaster tools
@@ -42,7 +42,7 @@ color:
 
 # Footer settings
 footer:
-  copyright: The Inflo Project
+  copyright: Inflo Ltd.
   location: World
   social: Connect with us
   credits: About
@@ -61,8 +61,8 @@ address:
   - line: 
 
 # Credits content
-credits: 'The Inflo Project is a next generation content sharing 
-platform revising the way we access and share information on the web, <i>intended to nourish, not feed.</i>'
+credits: 'The Inflo Project is a next generation social news aggregation
+platform revising the way we access and share information on the web'
 
 # Build settings
 markdown: kramdown
