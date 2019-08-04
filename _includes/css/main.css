@@ -30,8 +30,8 @@ a.active {
 h1,
 h2,
 h3, h4 {
-  text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 600;
 
 
@@ -42,13 +42,13 @@ h5 {
 
     font-size:  14px;
     line-height:    18px;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 600; 
 }
 
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 500;
 }
 
@@ -126,8 +126,8 @@ header .intro-text {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
     background-color: rgba(255,255,255, 0.6);
@@ -165,7 +165,7 @@ margin-top: 50px;
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
+        padding-top: 160px;
         padding-bottom: 100px;
     }
 
@@ -187,13 +187,6 @@ color: #{{ site.color.primary }};
 
 }
 
-@media(min-width:768px) {
-    .navbar-fixed-top {
-        padding: 25px 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
 
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
@@ -202,44 +195,15 @@ color: #{{ site.color.primary }};
         transition: all .3s;
     }
 
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
+.navbar-brand {
         font-size: 2em;
     }
 }
 
-
-
-@media(max-width:400px) {
-    .navbar-fixed-top {
-        padding: 0 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        font-size: 1em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1em;
-    }
-}
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-transform: none;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 600;
     background: {{site.primary}} ;
 }
@@ -262,7 +226,7 @@ color: #{{ site.color.primary }};
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 section h2 {
@@ -273,12 +237,17 @@ section h2 {
 section.success {
     color: #2c3e50;
     background: #ffffff;
+    display: flex;
+    justify-content: center;
 }
 
 
 section.team {
     
     background: #{{ site.color.twitty }};
+        display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 
@@ -292,28 +261,70 @@ section.tech {
 
 
 
-@media(max-width:767px) {
-    section {
-        padding: 75px 0;
-    }
+.feature {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 8px auto;
 
-    section.first {
-        padding-top: 75px;
-    }
 }
 
 
 
-.feature img {
-    max-width: 100%;
-    display: inline-block; 
-    float: left
+.row {
 
+    max-width: 100%;
+    text-align: center;
+
+}
+
+.valuesRow {
+    display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    align-items: top;
+    align-content: center;
+}
+
+
+
+.vertCenter{
+  display: flex;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.valuesCol {
+width: 45%;
+min-width: 300px;
+align-items: flex-start;
+margin-top: 0;
+
+
+}
+
+.value {
+
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+img.screenshot {
+
+    max-width: 45%;
+    min-width: 200px;
+    box-shadow: 5px 4px 5px darkgrey;
+    padding: 0;
 }
 
 .technology-img {
 
-    max-width:  80px;
+    max-width:  150px;
 }
 
 section.portfolio {
@@ -612,26 +623,18 @@ footer .footer-below {
 
 .cb_layout {
 
-    clear: none;
-    float: left;
-
     border-radius: 25px; 
-
-    padding-bottom: 0px;
-    margin: 0px;
+    width: 100%;
+    
+    background-color: none;
+    padding:3%;
+    margin-top: 10px; 
+    margin-bottom: 0px;
+    border: 1px solid lightgrey;
     
 
-    width: 100%;
-    /*opacity: 0.7; */
-    background-color: white;
-    display: block;
-    position:   relative;   
-
-    transition: 0.1s;
-    border: 0px solid;
-    border-color:   rgb(44, 62, 80);
-
 }
+
 
 
 /*.cb_layout:hover {
@@ -672,7 +675,10 @@ div.image_container>img {
     border-radius:  50%;
 
 }
+.container {
 
+    height: auto;
+}
 
 .info {
 

@@ -5,7 +5,7 @@
 
 email: your-email@domain.com
 url: https://example.github.io
-welcome: Welcome to Inflo
+welcome: Digital news, revised
 skills: 
 
 
@@ -34,11 +34,11 @@ disqus_shortname: myshortname
 # Color settings (hex-codes without the leading hash-tag)
 color:
   white: 999
-  primary: 1494C2 #18bc9c #80B3FF //green
+  primary: 587c9c #18bc9c #80B3FF //green
   primary-rgb: "24,288,156" #"128,179,255"
   secondary: 2C3E65 # #FD6E8A
   secondary-dark: 233155 #233140 #A2122F dark blue
-  twitty: e7ecf1 #bg gray
+  twitty: F2F5F9 #bg gray
 
 # Footer settings
 footer:
@@ -61,8 +61,7 @@ address:
   - line: 
 
 # Credits content
-credits: 'The Inflo Project is a next generation social news aggregation
-platform revising the way we access and share information on the web'
+credits: 'The Inflo Project is a news sharing and context hub, revising the way get news online'
 
 # Build settings
 markdown: kramdown
