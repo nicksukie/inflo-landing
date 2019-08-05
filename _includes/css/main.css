@@ -272,10 +272,14 @@ section.tech {
 
 
 
-.row {
 
-    max-width: 100%;
+.aboutRow {
+
+
+    width: 90%;
     text-align: center;
+    margin: 0 auto;
+
 
 }
 
@@ -320,6 +324,7 @@ img.screenshot {
     min-width: 200px;
     box-shadow: 5px 4px 5px darkgrey;
     padding: 0;
+    margin-top: 15px;
 }
 
 .technology-img {
@@ -632,6 +637,7 @@ footer .footer-below {
     margin-bottom: 0px;
     border: 1px solid lightgrey;
     
+    
 
 }
 
@@ -678,6 +684,7 @@ div.image_container>img {
 .container {
 
     height: auto;
+
 }
 
 .info {
