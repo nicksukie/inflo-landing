@@ -61,7 +61,7 @@ address:
   - line: 
 
 # Credits content
-credits: 'The Inflo Project is a news sharing and context hub, revising the way get news online'
+credits: 'The Inflo Project is a news sharing and context hub, revising the way we get news online'
 
 # Build settings
 markdown: kramdown
