@@ -327,9 +327,10 @@ img.screenshot {
     margin-top: 15px;
 }
 
-.technology-img {
+.technology-img>img {
 
-    max-width:  150px;
+    width:  150px;
+
 }
 
 section.portfolio {
